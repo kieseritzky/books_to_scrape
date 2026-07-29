@@ -53,3 +53,5 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         logger.warning("Program interrupted by user.")
+    except Exception as e:
+        logger.warning("Scraper stopped: %s", e)

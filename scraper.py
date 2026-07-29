@@ -77,7 +77,7 @@ async def advanced_scraper(context, data):
                 data.append(result)
 
             except Exception as e:
-                logger.exception("Failed scraping %s.", url)
+                logger.warning("Failed scraping %s.", url)
                 # print(f"Failed {url}: {e}")
 
             finally:
