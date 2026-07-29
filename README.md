@@ -8,6 +8,8 @@ The project started as a basic scraper that collected information from listing p
 
 The upgraded version demonstrates how asynchronous programming can improve scraping performance by allowing multiple book detail pages to be processed concurrently.
 
+The project demonstrates asynchronous programming, task queues, and the producer-consumer pattern to efficiently scrape book detail pages concurrently.
+
 ---
 
 ## Features
@@ -24,9 +26,11 @@ The upgraded version demonstrates how asynchronous programming can improve scrap
 * Uses `asyncio.Queue` to manage scraping tasks
 * Implements a producer-consumer architecture
 * Uses multiple asynchronous workers
-* Each worker manages its own Playwright page
+* Each worker maintains its own Playwright page to avoid resource contention
 * Scrapes detailed information from individual book pages
-* Continues processing even if individual pages fail
+* Continues scraping even if individual pages fail
+* Uses structured logging for console output and error reporting
+* Gracefully handles interruption (Ctrl+C) by saving scraped data before exiting.
 
 ---
 
@@ -37,6 +41,7 @@ The upgraded version demonstrates how asynchronous programming can improve scrap
 * asyncio
 * JSON
 * CSV
+* logging
 
 ---
 
@@ -153,6 +158,7 @@ This project helped me practice:
 * Browser automation using Playwright
 * Error handling in async applications
 * Improving scraper scalability
+* Using Python's logging module for structured application logging
 
 ---
 
@@ -160,12 +166,12 @@ This project helped me practice:
 
 Possible improvements:
 
-* Add retry handling for failed requests
-* Add logging instead of print statements
-* Store data in a database
-* Add duplicate detection
-* Add configurable worker counts
-* Add scraping statistics and progress tracking
+- [ ] Add retry handling for failed requests
+- [X] Add logging instead of print statements
+- [ ] Store data in a database
+- [ ] Add duplicate detection
+- [ ] Add configurable worker counts
+- [ ] Add scraping statistics and progress tracking
 
 ---
 
