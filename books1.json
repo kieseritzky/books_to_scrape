@@ -1,0 +1,362 @@
+[
+    {
+        "title": "a_light_in_the_attic",
+        "price": "\u00a351.77",
+        "availability": "In stock",
+        "rating": "Three"
+    },
+    {
+        "title": "tipping_the_velvet",
+        "price": "\u00a353.74",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "soumission",
+        "price": "\u00a350.10",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "sharp_objects",
+        "price": "\u00a347.82",
+        "availability": "In stock",
+        "rating": "Four"
+    },
+    {
+        "title": "sapiens:_a_brief_history_of_humankind",
+        "price": "\u00a354.23",
+        "availability": "In stock",
+        "rating": "Five"
+    },
+    {
+        "title": "the_requiem_red",
+        "price": "\u00a322.65",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "the_dirty_little_secrets_of_getting_your_dream_job",
+        "price": "\u00a333.34",
+        "availability": "In stock",
+        "rating": "Four"
+    },
+    {
+        "title": "the_coming_woman:_a_novel_based_on_the_life_of_the_infamous_feminist,_victoria_woodhull",
+        "price": "\u00a317.93",
+        "availability": "In stock",
+        "rating": "Three"
+    },
+    {
+        "title": "the_boys_in_the_boat:_nine_americans_and_their_epic_quest_for_gold_at_the_1936_berlin_olympics",
+        "price": "\u00a322.60",
+        "availability": "In stock",
+        "rating": "Four"
+    },
+    {
+        "title": "the_black_maria",
+        "price": "\u00a352.15",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "starving_hearts_triangular_trade_trilogy,_1",
+        "price": "\u00a313.99",
+        "availability": "In stock",
+        "rating": "Two"
+    },
+    {
+        "title": "shakespeare's_sonnets",
+        "price": "\u00a320.66",
+        "availability": "In stock",
+        "rating": "Four"
+    },
+    {
+        "title": "set_me_free",
+        "price": "\u00a317.46",
+        "availability": "In stock",
+        "rating": "Five"
+    },
+    {
+        "title": "scott_pilgrim's_precious_little_life_scott_pilgrim_1",
+        "price": "\u00a352.29",
+        "availability": "In stock",
+        "rating": "Five"
+    },
+    {
+        "title": "rip_it_up_and_start_again",
+        "price": "\u00a335.02",
+        "availability": "In stock",
+        "rating": "Five"
+    },
+    {
+        "title": "our_band_could_be_your_life:_scenes_from_the_american_indie_underground,_1981-1991",
+        "price": "\u00a357.25",
+        "availability": "In stock",
+        "rating": "Three"
+    },
+    {
+        "title": "olio",
+        "price": "\u00a323.88",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "mesaerion:_the_best_science_fiction_stories_1800-1849",
+        "price": "\u00a337.59",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "libertarianism_for_beginners",
+        "price": "\u00a351.33",
+        "availability": "In stock",
+        "rating": "Two"
+    },
+    {
+        "title": "it's_only_the_himalayas",
+        "price": "\u00a345.17",
+        "availability": "In stock",
+        "rating": "Two"
+    },
+    {
+        "title": "in_her_wake",
+        "price": "\u00a312.84",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "how_music_works",
+        "price": "\u00a337.32",
+        "availability": "In stock",
+        "rating": "Two"
+    },
+    {
+        "title": "foolproof_preserving:_a_guide_to_small_batch_jams,_jellies,_pickles,_condiments,_and_more:_a_foolproof_guide_to_making_small_batch_jams,_jellies,_pickles,_condiments,_and_more",
+        "price": "\u00a330.52",
+        "availability": "In stock",
+        "rating": "Three"
+    },
+    {
+        "title": "chase_me_paris_nights_2",
+        "price": "\u00a325.27",
+        "availability": "In stock",
+        "rating": "Five"
+    },
+    {
+        "title": "black_dust",
+        "price": "\u00a334.53",
+        "availability": "In stock",
+        "rating": "Five"
+    },
+    {
+        "title": "birdsong:_a_story_in_pictures",
+        "price": "\u00a354.64",
+        "availability": "In stock",
+        "rating": "Three"
+    },
+    {
+        "title": "america's_cradle_of_quarterbacks:_western_pennsylvania's_football_factory_from_johnny_unitas_to_joe_montana",
+        "price": "\u00a322.50",
+        "availability": "In stock",
+        "rating": "Three"
+    },
+    {
+        "title": "aladdin_and_his_wonderful_lamp",
+        "price": "\u00a353.13",
+        "availability": "In stock",
+        "rating": "Three"
+    },
+    {
+        "title": "worlds_elsewhere:_journeys_around_shakespeare\u2019s_globe",
+        "price": "\u00a340.30",
+        "availability": "In stock",
+        "rating": "Five"
+    },
+    {
+        "title": "wall_and_piece",
+        "price": "\u00a344.18",
+        "availability": "In stock",
+        "rating": "Four"
+    },
+    {
+        "title": "the_four_agreements:_a_practical_guide_to_personal_freedom",
+        "price": "\u00a317.66",
+        "availability": "In stock",
+        "rating": "Five"
+    },
+    {
+        "title": "the_five_love_languages:_how_to_express_heartfelt_commitment_to_your_mate",
+        "price": "\u00a331.05",
+        "availability": "In stock",
+        "rating": "Three"
+    },
+    {
+        "title": "the_elephant_tree",
+        "price": "\u00a323.82",
+        "availability": "In stock",
+        "rating": "Five"
+    },
+    {
+        "title": "the_bear_and_the_piano",
+        "price": "\u00a336.89",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "sophie's_world",
+        "price": "\u00a315.94",
+        "availability": "In stock",
+        "rating": "Five"
+    },
+    {
+        "title": "penny_maybe",
+        "price": "\u00a333.29",
+        "availability": "In stock",
+        "rating": "Three"
+    },
+    {
+        "title": "maude_1883-1993:she_grew_up_with_the_country",
+        "price": "\u00a318.02",
+        "availability": "In stock",
+        "rating": "Two"
+    },
+    {
+        "title": "in_a_dark,_dark_wood",
+        "price": "\u00a319.63",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "behind_closed_doors",
+        "price": "\u00a352.22",
+        "availability": "In stock",
+        "rating": "Four"
+    },
+    {
+        "title": "you_can't_bury_them_all:_poems",
+        "price": "\u00a333.63",
+        "availability": "In stock",
+        "rating": "Two"
+    },
+    {
+        "title": "slow_states_of_collapse:_poems",
+        "price": "\u00a357.31",
+        "availability": "In stock",
+        "rating": "Three"
+    },
+    {
+        "title": "reasons_to_stay_alive",
+        "price": "\u00a326.41",
+        "availability": "In stock",
+        "rating": "Two"
+    },
+    {
+        "title": "private_paris_private_10",
+        "price": "\u00a347.61",
+        "availability": "In stock",
+        "rating": "Five"
+    },
+    {
+        "title": "higherselfie:_wake_up_your_life_free_your_soul_find_your_tribe",
+        "price": "\u00a323.11",
+        "availability": "In stock",
+        "rating": "Five"
+    },
+    {
+        "title": "without_borders_wanderlove_1",
+        "price": "\u00a345.07",
+        "availability": "In stock",
+        "rating": "Two"
+    },
+    {
+        "title": "when_we_collided",
+        "price": "\u00a331.77",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "we_love_you,_charlie_freeman",
+        "price": "\u00a350.27",
+        "availability": "In stock",
+        "rating": "Five"
+    },
+    {
+        "title": "untitled_collection:_sabbath_poems_2014",
+        "price": "\u00a314.27",
+        "availability": "In stock",
+        "rating": "Four"
+    },
+    {
+        "title": "unseen_city:_the_majesty_of_pigeons,_the_discreet_charm_of_snails_&_other_wonders_of_the_urban_wilderness",
+        "price": "\u00a344.18",
+        "availability": "In stock",
+        "rating": "Four"
+    },
+    {
+        "title": "unicorn_tracks",
+        "price": "\u00a318.78",
+        "availability": "In stock",
+        "rating": "Three"
+    },
+    {
+        "title": "unbound:_how_eight_technologies_made_us_human,_transformed_society,_and_brought_our_world_to_the_brink",
+        "price": "\u00a325.52",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "tsubasa:_world_chronicle_2_tsubasa_world_chronicle_2",
+        "price": "\u00a316.28",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "throwing_rocks_at_the_google_bus:_how_growth_became_the_enemy_of_prosperity",
+        "price": "\u00a331.12",
+        "availability": "In stock",
+        "rating": "Three"
+    },
+    {
+        "title": "this_one_summer",
+        "price": "\u00a319.49",
+        "availability": "In stock",
+        "rating": "Four"
+    },
+    {
+        "title": "thirst",
+        "price": "\u00a317.27",
+        "availability": "In stock",
+        "rating": "Five"
+    },
+    {
+        "title": "the_torch_is_passed:_a_harding_family_story",
+        "price": "\u00a319.09",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "the_secret_of_dreadwillow_carse",
+        "price": "\u00a356.13",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "the_pioneer_woman_cooks:_dinnertime:_comfort_classics,_freezer_food,_16-minute_meals,_and_other_delicious_ways_to_solve_supper!",
+        "price": "\u00a356.41",
+        "availability": "In stock",
+        "rating": "One"
+    },
+    {
+        "title": "the_past_never_ends",
+        "price": "\u00a356.50",
+        "availability": "In stock",
+        "rating": "Four"
+    },
+    {
+        "title": "the_natural_history_of_us_the_fine_art_of_pretending_2",
+        "price": "\u00a345.22",
+        "availability": "In stock",
+        "rating": "Three"
+    }
+]

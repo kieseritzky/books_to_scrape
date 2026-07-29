@@ -1,7 +1,10 @@
 from urllib.parse import urljoin
-import asyncio
+import asyncio, logging
 from config import BASE_URL
 from parsers import clean_key, clean_text
+
+logger = logging.getLogger(__name__)
+
 
 async def basic_scraper(context, data):
     page = await context.new_page()
@@ -12,7 +15,8 @@ async def basic_scraper(context, data):
     books = 1
 
     while True:
-        print(f"Scraping page number {page_number}")
+        logger.info("Scraping page number %d", page_number)
+        # print(f"Scraping page number {page_number}")
         book_el = await page.locator(".product_pod").all()
         for el in book_el:
             result = {}
@@ -41,7 +45,8 @@ async def basic_scraper(context, data):
         await next_button.click()
         page_number += 1
 
-    print(f"Extracted data for {books} books from {page_number} pages")
+    logger.info("Extracted data for %d books from %d page_number", books, page_number)
+    # print(f"Extracted data for {books} books from {page_number} pages")
 
 async def advanced_scraper(context, data):
 
@@ -72,7 +77,8 @@ async def advanced_scraper(context, data):
                 data.append(result)
 
             except Exception as e:
-                print(f"Failed {url}: {e}")
+                logger.exception("Failed scraping %s.", url)
+                # print(f"Failed {url}: {e}")
 
             finally:
                 queue.task_done()
@@ -91,7 +97,8 @@ async def advanced_scraper(context, data):
     page_number = 1
 
     while True:
-        print(f"Extracting links from listing page {page_number}...")
+        logger.info("Extracting links from listing page %d", page_number)
+        # print(f"Extracting links from listing page {page_number}...")
 
         #Grab all URLs 
         link_elements = await page.locator(".product_pod h3 a").all()
@@ -121,4 +128,5 @@ async def advanced_scraper(context, data):
         await queue.put(None)
 
     await asyncio.gather(*workers)
+    logger.info("Successfully scraped %d books from %d pages", book, page_number)
     print(f"Successfully scraped {book} books from {page_number} pages.")    
