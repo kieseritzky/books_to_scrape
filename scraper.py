@@ -1,21 +1,28 @@
 from urllib.parse import urljoin
 import asyncio, logging
 from config import BASE_URL
-from parsers import clean_key, clean_text
+from scraper.parsers import clean_key, clean_text
+from utils.retry import retry
+from utils.progress import show_bar, clear_bar
 
 logger = logging.getLogger(__name__)
 
 
 async def basic_scraper(context, data):
     page = await context.new_page()
-    await page.goto(BASE_URL)
+    await retry(lambda: page.goto(BASE_URL))
     await page.wait_for_load_state()
 
     page_number = 1
-    books = 1
+    books = 0
+    total_books = 1000
 
     while True:
+
+        clear_bar()
         logger.info("Scraping page number %d", page_number)
+        show_bar
+
         # print(f"Scraping page number {page_number}")
         book_el = await page.locator(".product_pod").all()
         for el in book_el:
@@ -37,14 +44,16 @@ async def basic_scraper(context, data):
         
             data.append(result)
             books += 1
+            show_bar(books, total_books)
 
         next_button = page.locator(".next a")
         if await next_button.count() == 0:
             break
 
-        await next_button.click()
+        await retry(lambda: next_button.click())
         page_number += 1
 
+    clear_bar()
     logger.info("Extracted data for %d books from %d page_number", books, page_number)
     # print(f"Extracted data for {books} books from {page_number} pages")
 
@@ -60,7 +69,7 @@ async def advanced_scraper(context, data):
                 queue.task_done()
                 break
             try:
-                await detail_page.goto(url, wait_until="domcontentloaded")
+                await retry(lambda: detail_page.goto(url, wait_until="domcontentloaded"))
 
                 result = {}
                 para_el = detail_page.locator("article.product_page > p")
@@ -91,7 +100,8 @@ async def advanced_scraper(context, data):
         ]
     
     page = await context.new_page()
-    await page.goto(BASE_URL, wait_until="domcontentloaded")
+    await retry(lambda: page.goto(BASE_URL, wait_until="domcontentloaded"))
+
 
     book = 0
     page_number = 1
@@ -117,7 +127,7 @@ async def advanced_scraper(context, data):
             print("No more pages left to scrape.")
             break
 
-        await next_button.click()
+        await retry(lambda: next_button.click())
         await page.wait_for_load_state("domcontentloaded")
 
         page_number += 1
@@ -129,4 +139,4 @@ async def advanced_scraper(context, data):
 
     await asyncio.gather(*workers)
     logger.info("Successfully scraped %d books from %d pages", book, page_number)
-    print(f"Successfully scraped {book} books from {page_number} pages.")    
+    # print(f"Successfully scraped {book} books from {page_number} pages.")    

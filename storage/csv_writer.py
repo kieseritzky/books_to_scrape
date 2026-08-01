@@ -1,5 +1,4 @@
-import csv, json
-from logger_config import logging
+import csv, json, logging
 
 logger = logging.getLogger(__name__)
 
@@ -10,7 +9,3 @@ def save_to_csv(filename, data, fieldnames):
         writer.writerows(data)
     logger.info("Successfully saved CSV to %s", filename)
 
-def save_to_json(filename, data):
-    with open(filename, "w", encoding="utf-8") as file:
-        json.dump(data, file, indent=4)
-    logger.info("Successfully saved JSON to %s", filename)
