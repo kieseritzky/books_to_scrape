@@ -6,6 +6,9 @@ def clean_text(raw_text):
         return raw_text.strip()
     return ""
 
+def clean_price(raw_price):
+    return raw_price.replace("£", "")
+
 async def parse_book(el):
     result = {}
     
@@ -13,7 +16,7 @@ async def parse_book(el):
     result["title"] = clean_key(await title_el.get_attribute("title"))
 
     price_el = el.locator(".price_color")
-    result["price"] = clean_text(await price_el.inner_text())
+    result["price"] = clean_text(clean_price(await price_el.inner_text()))
 
     avail_el = el.locator("p.instock.availability")
     result["availability"] = clean_text(await avail_el.inner_text())
@@ -39,4 +42,7 @@ async def parse_book_page(detail_page):
         key = clean_key(await row.locator("th").inner_text())
         value = clean_text(await row.locator("td").inner_text())
         result[key.lower().replace(" ", "_")] = value
+    price_keys = ["price_excl_tax", "price_incl_tax", "tax"]
+    for price in price_keys:
+        result[price] = clean_price(result[price])
     return result

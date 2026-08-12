@@ -1,6 +1,7 @@
+from pydantic_settings import BaseSettings, SettingsConfigDict
 #Project Settings
 BASE_URL = "https://books.toscrape.com"
-HEADLESS = False
+HEADLESS = True
 
 #Output Filenames
 BASIC_CSV = "data/books1.csv"
@@ -14,3 +15,15 @@ ADVANCED_FIELDS = [
     "description", "upc", "product_type", "price_excl_tax", 
     "price_incl_tax", "tax", "availability", "number_of_reviews"
 ]
+
+class Settings(BaseSettings):
+    database_hostname: str
+    database_port: str
+    database_password: str
+    database_name: str
+    database_username: str
+    
+
+    model_config = SettingsConfigDict(env_file=".env")
+
+settings = Settings() # type: ignore

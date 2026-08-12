@@ -1,0 +1,27 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# IDE
+.vscode/
+
+# Secrets
+.env
+.env.*
+
+# Logs
+*.log
+
+# Test/development files
+tests/
+
+# Generated scraper output
+data/*.csv
+data/*.json

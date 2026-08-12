@@ -1,7 +1,7 @@
 import logging
 from utils.retry import retry
 from scraper.parsers import clean_key, clean_text, parse_book_page
-
+from database.repository import advanced_save_to_postgres
 logger = logging.getLogger(__name__)
 
 async def worker(context, queue, data, progress):
@@ -17,6 +17,7 @@ async def worker(context, queue, data, progress):
 
                 result = await parse_book_page(detail_page)
                 data.append(result)
+                advanced_save_to_postgres(result)
                 await progress.book_finished()
 
             except Exception as e:

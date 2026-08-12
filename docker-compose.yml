@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:18.4
+    container_name: books-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: asim
+      POSTGRES_DB: books_to_scrape
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+
+  api:
+    build: .
+    container_name: books-api
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  scraper:
+    build: .
+    container_name: books-scraper
+    env_file:
+      - .env
+    depends_on:
+      - db
+    volumes:
+      - ./data:/app/data
+
+volumes:
+  postgres_data:

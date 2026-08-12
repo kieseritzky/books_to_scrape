@@ -1,3 +1,5 @@
+from database.repository import basic_save_to_postgres
+from database.connection import get_db
 from urllib.parse import urljoin
 import logging
 from utils.retry import retry
@@ -46,6 +48,8 @@ async def basic_listing(context, data):
             for el in book_el:
                 result = await parse_book(el)
                 data.append(result)
+                basic_save_to_postgres(result)
+
 
                 progress.update(
                     books_task,

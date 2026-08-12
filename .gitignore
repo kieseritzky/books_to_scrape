@@ -1,9 +1,27 @@
+# Virtual environments
 venv/
+.venv/
+
+# Python
 __pycache__/
-books1.csv
-books1.json
-books2.csv
-books2.json
-problems.txt
-app.log
-scraper.py
+*.py[cod]
+
+# Environment / secrets
+.env
+.env.*
+
+# Testing
+.pytest_cache/
+
+# IDE
+.vscode/
+
+# Generated data
+data/*.csv
+data/*.json
+
+# Logs
+*.log
+
+
+
